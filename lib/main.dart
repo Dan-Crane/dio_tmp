@@ -1,6 +1,14 @@
+import 'package:dio_tmp/client_adapter/client_adapter.dart';
 import 'package:flutter/material.dart';
 
 void main() {
+  try {
+    final adapter = makeHttpClientAdapter();
+    print(adapter);
+  } on Object catch (error) {
+    print(error);
+  }
+
   runApp(const MyApp());
 }
 
